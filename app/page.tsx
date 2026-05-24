@@ -2,6 +2,9 @@ import SmallMultiples from "@/components/charts/SmallMultiples";
 import Sparklines from "@/components/charts/Sparklines";
 import RangeFrameScatter from "@/components/charts/RangeFrameScatter";
 import Slopegraph from "@/components/charts/Slopegraph";
+import ConnectedScatter from "@/components/charts/ConnectedScatter";
+import SparklineProse from "@/components/charts/SparklineProse";
+import ReactiveDocument from "@/components/charts/ReactiveDocument";
 
 export default function Home() {
   return (
@@ -29,6 +32,24 @@ export default function Home() {
         <section className="mb-16 flex flex-wrap gap-8">
           <RangeFrameScatter />
           <Slopegraph />
+        </section>
+
+        <div className="border-t border-[#e5e5e0] my-8" />
+
+        <section className="mb-16">
+          <ConnectedScatter />
+        </section>
+
+        <div className="border-t border-[#e5e5e0] my-8" />
+
+        <section className="mb-16">
+          <SparklineProse />
+        </section>
+
+        <div className="border-t border-[#e5e5e0] my-8" />
+
+        <section className="mb-16">
+          <ReactiveDocument />
         </section>
       </div>
     </main>

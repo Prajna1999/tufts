@@ -148,8 +148,8 @@ export default function Slopegraph() {
                 {h2}k
               </text>
 
-              {/* Annotation — appears mid-slope, italic, only when hovered or always if present */}
-              {annotation && isHovered && (
+              {/* Annotation — always visible, mid-slope, italic */}
+              {annotation && (
                 <text
                   x={(xLeft + xRight) / 2}
                   y={(y1 + y2) / 2 - 8}
@@ -157,7 +157,8 @@ export default function Slopegraph() {
                   fontSize={8}
                   fill={color}
                   fontStyle="italic"
-                  style={{ pointerEvents: "none" }}
+                  opacity={isOther ? 0.18 : 1}
+                  style={{ pointerEvents: "none", transition: "opacity 120ms ease" }}
                 >
                   {annotation}
                 </text>
